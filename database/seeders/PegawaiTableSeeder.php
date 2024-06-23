@@ -21,7 +21,7 @@ class PegawaiTableSeeder extends Seeder
             'jenis_kelamin' => 'laki-laki',
             'alamat' => 'warungkara',
             'no_hp' => '087780776114',
-            'foto' => '1.jpg',
+            'foto' => '1.jpeg',
         ]);
         Pegawai::create([
             'Nik_pegawai' => '3672040000',
@@ -31,7 +31,7 @@ class PegawaiTableSeeder extends Seeder
             'jenis_kelamin' => 'laki-laki',
             'alamat' => 'warungkara',
             'no_hp' => '087780776114',
-            'foto' => '2.webp',
+            'foto' => '2.jpg',
         ]);
 
 

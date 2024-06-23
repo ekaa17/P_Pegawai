@@ -158,59 +158,9 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>5</h3>
-
-                <p>Pegawai</p>
-              </div>
-              <div class="icon">
-                <i class="icon fas fa-users"></i>
-              </div>
-              <a href="pegawais" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>3<sup style="font-size: 20px"></sup></h3>
-
-                <p>User</p>
-              </div>
-              <div class="icon">
-                <i class="icon fa fas fa-user"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          </div>
-          <div class="card-body">
-            <div class="tab-content p-0">
-              <!-- Morris chart - Sales -->
-              <div class="chart tab-pane active" id="revenue-chart"
-                   style="position: relative; height: 300px;">
-                  <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
-               </div>
-              <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
-                <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
-              </div>
-            </div>
-                        </tbody>
-                      </table>
-                    </div> <!-- tutup div table-responsive -->
-                  </div>            
-                </div>
-              </div>
-              <div class="row">      
-              </div>
+    <div class="card-body">
+      Selamat datang di halaman dashboard, {{ Auth::user()->name }}!
+  </div>
             </div>
           </main>
 

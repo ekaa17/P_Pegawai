@@ -195,12 +195,11 @@
               <textarea class="form-control" id="alamat" name="alamat" rows="3" placeholder="Masukkan Alamat">{{$pegawai->alamat}}</textarea>
           </div>
       </div>
-        {{-- <div class="form-group row">
-            <label for="foto" class="col-sm-2 col-form-label">Foto</label>
-            <div class="col-sm-10">
-                <input type="file" class="form-control-file" id="foto" name="foto">
-            </div>
-        </div> --}}
+      <div class="form-group row">
+        <label for="foto" class="col-sm-2 col-form-label">Foto</label>
+        <div class="col-sm-10">
+            <input type="file" class="form-control-file" id="foto" name="foto">
+        </div>
         <div class="form-group row">
             <div class="col-sm-10 offset-sm-2">
                 <button type="submit" class="btn btn-primary">Simpan</button>
