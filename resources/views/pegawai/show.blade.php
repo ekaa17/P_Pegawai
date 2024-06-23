@@ -128,7 +128,7 @@
     <div class="col-md-3">
         <div class="card shadow-sm">
             <div class="card-header bg-transparent text-center">
-                <img src="{{ asset('assets/img/isi.jpg') }}" class="rounded-circle" width="150" height="150" alt="Pegawai Profile Picture" />
+                <img src="{{ asset('assets/img/'. $pegawai->foto) }}" class="rounded-circle" width="150" height="150" alt="Pegawai Profile Picture" />
                 <h3>{{ $pegawai->Nama_pegawai }}</h3>
                 <p class="mb-0">{{ $pegawai->Jabatan }}</p>
             </div>

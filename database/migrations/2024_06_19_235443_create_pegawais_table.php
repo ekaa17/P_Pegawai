@@ -22,6 +22,7 @@ class CreatePegawaisTable extends Migration
             $table->string('jenis_kelamin');
             $table->string('alamat');
             $table->string('no_hp');
+            $table->string('foto');
             $table->timestamps();
         });
     }

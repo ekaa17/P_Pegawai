@@ -20,7 +20,8 @@ class PegawaiTableSeeder extends Seeder
             'Tgl_Lahir' => ' 1990-01-01',
             'jenis_kelamin' => 'laki-laki',
             'alamat' => 'warungkara',
-            'no_hp' => '087780776114'
+            'no_hp' => '087780776114',
+            'foto' => '1.jpg',
         ]);
         Pegawai::create([
             'Nik_pegawai' => '3672040000',
@@ -29,7 +30,8 @@ class PegawaiTableSeeder extends Seeder
             'Tgl_Lahir' => ' 1990-01-01',
             'jenis_kelamin' => 'laki-laki',
             'alamat' => 'warungkara',
-            'no_hp' => '087780776114'
+            'no_hp' => '087780776114',
+            'foto' => '2.webp',
         ]);
 
 
@@ -40,7 +42,8 @@ class PegawaiTableSeeder extends Seeder
             'Tgl_Lahir' => '1990-01-01',
             'jenis_kelamin' => 'laki-laki',
             'alamat' => 'warungkara',
-            'no_hp' => '087780776114'
+            'no_hp' => '087780776114',
+            'foto' => '3.jpg',
         ]);
     }
 }

@@ -227,6 +227,50 @@
   <div class="float-right d-none d-sm-inline-block">
     <b>Version</b> SalahHati
   </div>
+
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script>
+    // Script for Sweet Alert
+    $(document).ready(function () {
+      $('form').submit(function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        var form = $(this);
+        var url = form.attr('action');
+        var formData = form.serialize();
+
+        // Submit form data using AJAX
+        $.ajax({
+          type: 'POST',
+          url: url,
+          data: formData,
+          success: function (data) {
+            // Show Sweet Alert with success message
+            Swal.fire({
+              title: 'Berhasil!',
+              text: 'Data berhasil diubah.',
+              icon: 'success',
+              showCancelButton: false,
+              confirmButtonText: 'OK'
+            }).then(function () {
+              // Redirect or do something else after OK button is clicked
+              window.location.href = '{{ url('/home') }}'; // Example redirect
+            });
+          },
+          error: function (data) {
+            // Show Sweet Alert with error message
+            Swal.fire({
+              title: 'Gagal!',
+              text: 'Terjadi kesalahan saat mengubah data.',
+              icon: 'error',
+              showCancelButton: false,
+              confirmButtonText: 'OK'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </body>
 @endsection

@@ -23,6 +23,14 @@ class PegawaiController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request);
+        if ($request->hasFile('foto')) {
+            $image = $request->file('foto');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('assets/img/'), $imageName);
+        } else {
+            $imageName = null; // Jika tidak ada foto diunggah
+        }
         Pegawai::create([
             'Nik_pegawai' => $request->Nik_pegawai,
             'Nama_pegawai' => $request->Nama_pegawai,
@@ -31,11 +39,13 @@ class PegawaiController extends Controller
             'jenis_kelamin' => $request->jenis_kelamin,
             'no_hp' => $request->no_hp,
             'alamat' => $request->alamat,
+            'foto' => $imageName,
         ]);
         return redirect('/pegawais');
         // dd($request->all());
 
     }
+
 
     public function edit($id)
     {

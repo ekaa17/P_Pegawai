@@ -163,7 +163,7 @@
     <!-- Main content -->
     <section class="content">
           <div class="container">
-            <form action="{{ url('/store') }}" method="POST">
+            <form action="{{ route('pegawai.store') }}"   method="POST" enctype="multipart/form-data">
               @csrf
               <div class="form-group row">
                   <label for="nip" class="col-sm-2 col-form-label">NIP</label>
@@ -216,12 +216,12 @@
                       <textarea class="form-control"  name="alamat" rows="3" placeholder="Masukkan Alamat"></textarea>
                   </div>
               </div>
-              {{-- <div class="form-group row">
-                  <label for="foto" class="col-sm-2 col-form-label">Foto</label>
-                  <div class="col-sm-10">
-                      <input type="file" class="form-control-file" id="foto" name="foto">
-                  </div>
-              </div> --}}
+              <div class="form-group row">
+                <label for="foto" class="col-sm-2 col-form-label">Foto</label>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control-file" id="foto" name="foto">
+                </div>
+            </div>
               <div class="form-group row">
                   <div class="col-sm-10 offset-sm-2">
                       <button type="submit" class="btn btn-primary">Simpan</button>
@@ -293,6 +293,48 @@
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- SweetAlert 2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+{{-- <script>
+  $(document).ready(function() {
+    $('form').submit(function(e) {
+      e.preventDefault();
+      var form = $(this);
+      var formData = new FormData(form[0]); // Mengambil data form, termasuk file gambar
+      console.log(form)
+      $.ajax({
+        url: form.attr('action'),
+        type: 'POST',
+        data: formData,
+        processData: false,  // Mengabaikan pemrosesan data mentah
+        contentType: false,  // Tidak mengatur tipe konten
+        success: function(response) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Data berhasil disimpan!',
+            showConfirmButton: false,
+            timer: 1500
+          }).then(function() {
+            window.location.href = "{{ url('pegawais') }}"; // Redirect ke halaman pegawais
+          });
+        },
+        error: function(error) {
+          console.log('Error:', error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Terjadi kesalahan saat menyimpan data!'
+          });
+        }
+      });
+    });
+  });
+  </script> --}}
+  
 </body>
 </html>
 
